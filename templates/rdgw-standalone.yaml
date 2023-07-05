@@ -713,7 +713,7 @@ Resources:
     Properties:
       ResourceGroupName: !Ref 'RDGWResourceGroup'
       AutoConfigurationEnabled: true
-    DependsOn: RDGWResourceGroup
+    # DependsOn: RDGWResourceGroup
 Outputs:
   RDPURL:
     Description: ELB DNS name to connect to RDP Gateway.
