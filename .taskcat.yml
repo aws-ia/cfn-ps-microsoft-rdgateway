@@ -1,5 +1,5 @@
 project:
-  name: quickstart-microsoft-rdgateway
+  name: cfn-ps-microsoft-rdgateway
   owner: quickstart-eng@amazon.com
   package_lambda: false
   regions:

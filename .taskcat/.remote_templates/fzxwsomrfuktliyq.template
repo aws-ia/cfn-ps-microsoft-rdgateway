@@ -129,7 +129,7 @@ Parameters:
     ConstraintDescription: The Quick Start bucket name can include numbers, lowercase
       letters, uppercase letters, and hyphens (-). It cannot start or end with a 
       hyphen (-).
-    Default: aws-ps
+    Default: aws-quickstart
     Description: Name of the S3 bucket for your copy of the Quick Start assets. 
       Keep the default name unless you are customizing the template. 
       Changing the name updates code references to point to a new Quick 
@@ -143,7 +143,7 @@ Parameters:
     AllowedPattern: '^[a-zA-Z0-9\-\/]+$'
     ConstraintDescription: The Quick Start S3 key prefix can include numbers, lowercase letters,
       uppercase letters, hyphens (-), and forward slash (/).
-    Default: cfn-ps-microsoft-rdgateway/
+    Default: quickstart-microsoft-rdgateway/
     Description: S3 key prefix that is used to simulate a directory for your copy of the 
       Quick Start assets. Keep the default prefix unless you are customizing 
       the template. Changing this prefix updates code references to point to 
@@ -223,7 +223,7 @@ Rules:
         AssertDescription: M4 instances are not available in the Paris region.
 Conditions:
   UsingDefaultAppName: !Equals [!Ref AppInsightsApplicationName, '']
-  UsingDefaultBucket: !Equals [!Ref QSS3BucketName, 'aws-ps']
+  UsingDefaultBucket: !Equals [!Ref QSS3BucketName, 'aws-quickstart']
   appInsightsMonitoring: !Equals [!Ref SetupAppInsightsMonitoring, 'true']
 Resources:
   RDGWLocalUserSecrets:
@@ -272,7 +272,7 @@ Resources:
             minChars: '20'
           QSS3BucketName:
             allowedPattern: '^[a-z0-9]+[a-z0-9\.\-]*[a-z0-9]+$'
-            default: "aws-ps"
+            default: "aws-quickstart"
             description: "Name of the S3 bucket for your copy of the Quick Start assets. 
       Keep the default name unless you are customizing the template. 
       Changing the name updates code references to point to a new Quick 
@@ -284,7 +284,7 @@ Resources:
             type: "String"
           QSS3KeyPrefix:
             allowedPattern: '^[a-zA-Z0-9\-\/]+$'
-            default: "cfn-ps-microsoft-rdgateway/"
+            default: "quickstart-microsoft-rdgateway/"
             description: "S3 key prefix that is used to simulate a directory for your copy of the 
       Quick Start assets. Keep the default prefix unless you are customizing 
       the template. Changing this prefix updates code references to point to 
