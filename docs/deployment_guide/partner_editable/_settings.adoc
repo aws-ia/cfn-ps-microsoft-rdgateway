@@ -1,4 +1,5 @@
-:quickstart-project-name: quickstart-microsoft-rdgateway
+:partner-solution-project-name: cfn-ps-microsoft-rdgateway
+:partner-solution-github-org: aws-ia
 :partner-product-name: Remote Desktop Gateway
 :partner-product-short-name: RD Gateway
 :partner-company-name: Microsoft
